@@ -5,8 +5,8 @@ import string
 from pathlib import Path
 from subprocess import run
 from zipfile import PyZipFile
-from constants import *
-from utils import create_directory, clean_directory, prepare_directory
+from utils.constants import *
+from utils import create_directory, prepare_directory
 
 
 # copy the zip files

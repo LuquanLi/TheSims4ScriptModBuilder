@@ -4,8 +4,8 @@ import shutil
 import py_compile
 from zipfile import PyZipFile, ZIP_STORED
 from pathlib import Path
-from constants import *
-from utils import prepare_directory
+from utils.constants import *
+from utils.utils import prepare_directory
 
 
 def compile_src():
