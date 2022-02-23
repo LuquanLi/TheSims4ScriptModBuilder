@@ -6,12 +6,11 @@ from pathlib import Path
 from subprocess import run
 from zipfile import PyZipFile
 from utils.constants import *
-from utils import create_directory, prepare_directory
+from utils.utils import create_directory, prepare_directory
 
 
 # copy the zip files
 def copy_zip(src: string, dest: string):
-    prepare_directory(dest)
     shutil.copytree(src, dest)
 
 
@@ -48,6 +47,7 @@ def decompile(src: string):
 def copy_files_and_unzip():
     # The Sims 4.app/Contents/Python generated.zip
     # The Sims 4.app/Contents/Data/Simulation/Gameplay -> base.zip, core.zip, simulation.zip
+    prepare_directory(project_game_zip_dir)
     copy_zip(game_content_python, project_game_zip_dir + project_game_python)
     copy_zip(game_content_gameplay, project_game_zip_dir + project_game_gameplay)
 
