@@ -130,6 +130,7 @@ dmypy.json
 
 # IntelliJ
 .idea/
+.DS_Store
 
 # Build and decompiled game files
 build/
