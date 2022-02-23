@@ -130,3 +130,7 @@ dmypy.json
 
 # IntelliJ
 .idea/
+
+# Build and decompiled game files
+build/
+game/
