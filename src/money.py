@@ -1,5 +1,7 @@
-import services, sims4.commands
+import services
+import sims4.commands
 from protocolbuffers import Consts_pb2
+
 
 # Money
 @sims4.commands.Command('add_money', command_type=(sims4.commands.CommandType.Live))
@@ -10,6 +12,7 @@ def add_money(amount: int = 0, _connection=None):
     modify_fund_helper(amount, Consts_pb2.TELEMETRY_MONEY_CHEAT, tgt_client.active_sim)
 
     output("Add ${0}".format(amount))
+
 
 @sims4.commands.Command('remove_money', command_type=(sims4.commands.CommandType.Live))
 def remove_money(amount: int = 0, _connection=None):
@@ -27,6 +30,7 @@ def remove_money(amount: int = 0, _connection=None):
         output("Current family fund is not enough")
 
     output("Remove ${0}".format(remove_amount))
+
 
 def modify_fund_helper(amount, reason, sim):
     if amount > 0:
