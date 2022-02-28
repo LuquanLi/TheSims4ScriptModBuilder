@@ -10,6 +10,8 @@ project_game_zip_dir = project_dir + '/game/zip'
 project_game_unzip_dir = project_dir + '/game/unzip'
 project_game_decompile_dir = project_dir + '/game/decompile'
 game_content_python = game_content_dir + '/Python'
+# for windows
+# game_content_python = game_content_dir + '/Game/Bin/Python'
 game_content_gameplay = game_content_dir + '/Data/Simulation/Gameplay'
 project_game_python = '/python'
 project_game_gameplay = '/gameplay'
